@@ -1,0 +1,122 @@
+[
+  {
+    "category": "Getting Started",
+    "question": "Do I need to buy a whole Bitcoin?",
+    "answer": "No! You can buy a tiny fraction of Bitcoin. Bitcoin can be divided into 100 million smaller units called satoshis. You can start with as little as $1-5 worth of Bitcoin. Think of it like buying a slice of pizza instead of the whole pie."
+  },
+  {
+    "category": "Getting Started",
+    "question": "Is it too late to learn about Bitcoin?",
+    "answer": "Absolutely not! Bitcoin and blockchain technology are still in their early stages. Most people in the world still don't understand how they work, so you're actually ahead of the curve by learning now. Whether you invest or not, understanding this technology is valuable knowledge for the future."
+  },
+  {
+    "category": "Getting Started",
+    "question": "Do I need to be good at math or computers?",
+    "answer": "No! Using Bitcoin is like using any other app on your phone. You don't need to understand the complex math behind it, just like you don't need to understand how email encryption works to send an email. This course is designed for complete beginners with zero technical background."
+  },
+  {
+    "category": "Safety & Security",
+    "question": "Is Bitcoin safe?",
+    "answer": "The Bitcoin network itself is very secure—it's never been hacked. However, individual users can make mistakes that compromise their security (losing private keys, falling for scams, using insecure wallets). Learning proper security practices is essential. The biggest risks come from user error, not the technology itself."
+  },
+  {
+    "category": "Safety & Security",
+    "question": "Can I lose all my money?",
+    "answer": "Yes, in several ways: 1) If you lose your private keys/seed phrase, your Bitcoin is gone forever with no way to recover it. 2) Bitcoin's price is very volatile—it can drop significantly in value. 3) If you fall for scams or send Bitcoin to the wrong address. This is why we emphasize: only invest what you can afford to lose, and learn about security first."
+  },
+  {
+    "category": "Safety & Security",
+    "question": "What if I forget my password?",
+    "answer": "This depends on what you forget. If you forget your wallet app password but still have your seed phrase (12-24 word backup), you can recover your Bitcoin. But if you lose BOTH your password AND your seed phrase, your Bitcoin is permanently lost. There's no customer service to call—this is both a feature (no one can freeze your account) and a responsibility."
+  },
+  {
+    "category": "Safety & Security",
+    "question": "How do I avoid scams?",
+    "answer": "Follow these rules: 1) Never share your private keys or seed phrase with anyone, ever. 2) No legitimate person will ask for your crypto or promise to 'double your Bitcoin.' 3) Be extremely skeptical of investment opportunities promising guaranteed returns. 4) Only use well-known, reputable wallets and exchanges. 5) If something sounds too good to be true, it is."
+  },
+  {
+    "category": "How Bitcoin Works",
+    "question": "Who controls Bitcoin?",
+    "answer": "No single person, company, or government controls Bitcoin. It's maintained by thousands of computers (nodes) around the world running the same software. Changes to Bitcoin's code require consensus from the community. This decentralization is a core feature—no one can shut it down, freeze accounts, or print more Bitcoin."
+  },
+  {
+    "category": "How Bitcoin Works",
+    "question": "Where is Bitcoin stored?",
+    "answer": "This is a bit tricky: Bitcoin isn't actually 'stored' anywhere like files on a computer. Instead, the blockchain (a public ledger) records who owns what. Your wallet doesn't store Bitcoin—it stores the private keys that prove you own certain Bitcoin addresses on the blockchain. The Bitcoin itself exists as records on the blockchain."
+  },
+  {
+    "category": "How Bitcoin Works",
+    "question": "Can Bitcoin be hacked?",
+    "answer": "The Bitcoin blockchain itself has never been successfully hacked—the network is incredibly secure. However, individuals can be hacked: exchanges can be hacked, wallets can be compromised, and users can fall for phishing scams. The technology is secure, but individuals need to follow security best practices."
+  },
+  {
+    "category": "How Bitcoin Works",
+    "question": "Why do Bitcoin transactions take so long?",
+    "answer": "Bitcoin transactions aren't instant because they need to be verified by miners and added to a block, which happens roughly every 10 minutes. Then, most services wait for additional confirmations (more blocks added on top) for security. So a typical transaction takes 10-60 minutes. This is slower than credit cards but much faster than international wire transfers (3-5 days)."
+  },
+  {
+    "category": "How Bitcoin Works",
+    "question": "What happens when all 21 million Bitcoins are mined?",
+    "answer": "This won't happen until around the year 2140. After that, no new Bitcoin will be created. Miners will still process transactions and secure the network, but they'll only earn transaction fees (no block rewards). Bitcoin will become purely deflationary, and lost Bitcoin will make remaining coins more scarce."
+  },
+  {
+    "category": "Investing & Value",
+    "question": "Is Bitcoin a good investment?",
+    "answer": "This course is educational, not financial advice! Bitcoin has been very volatile—it has increased dramatically in value over the long term but also crashes hard periodically. Some people view it as 'digital gold' and a hedge against inflation. Others see it as speculative. Only you can decide if it fits your financial goals. Never invest more than you can afford to lose."
+  },
+  {
+    "category": "Investing & Value",
+    "question": "Why is Bitcoin valuable if it's not backed by anything?",
+    "answer": "Traditional currency isn't backed by anything physical either (we left the gold standard decades ago). Bitcoin has value for similar reasons: 1) Scarcity (limited supply), 2) Utility (you can send it globally without banks), 3) Security (can't be counterfeited), 4) Network effect (millions of people use it), and 5) Agreement (people believe it has value, just like any currency)."
+  },
+  {
+    "category": "Investing & Value",
+    "question": "Should I buy Bitcoin or other cryptocurrencies?",
+    "answer": "Bitcoin is the oldest, most established, and most secure cryptocurrency. There are thousands of other cryptocurrencies ('altcoins'), each with different features and risks. For beginners, if you're going to buy any crypto, Bitcoin is generally considered the safest option because it has the longest track record and largest network. But remember: all crypto is high-risk."
+  },
+  {
+    "category": "Investing & Value",
+    "question": "What makes Bitcoin's price go up or down?",
+    "answer": "Bitcoin's price is determined by supply and demand on exchanges. Factors include: 1) News and media coverage, 2) Regulatory announcements, 3) Adoption by companies or countries, 4) Market speculation, 5) Economic conditions, 6) Technical developments. Because Bitcoin is still relatively small and young, prices can swing wildly based on these factors."
+  },
+  {
+    "category": "Practical Questions",
+    "question": "Can I use Bitcoin to buy things?",
+    "answer": "Yes, but it's not common. Some companies accept Bitcoin (Microsoft, Overstock, some restaurants), but most everyday purchases still require traditional currency. Many people view Bitcoin more as a store of value (like gold) than as everyday spending money. Converting Bitcoin to regular currency for purchases is usually easier than finding places that accept it directly."
+  },
+  {
+    "category": "Practical Questions",
+    "question": "How do I convert Bitcoin back to regular money?",
+    "answer": "You can sell Bitcoin on cryptocurrency exchanges (like Coinbase, Kraken) and transfer the money to your bank account. The process usually takes a few business days and involves verification of your identity (for legal/regulatory reasons). Exchanges charge fees for both buying and selling."
+  },
+  {
+    "category": "Practical Questions",
+    "question": "Do I have to pay taxes on Bitcoin?",
+    "answer": "In most countries, yes! Tax authorities (like the IRS in the US) treat Bitcoin as property, not currency. This means you may owe taxes when you sell Bitcoin for profit, trade it for other crypto, or even use it to buy things. Tax rules vary by country, so consult a tax professional if you're buying or selling crypto."
+  },
+  {
+    "category": "Practical Questions",
+    "question": "What's the difference between Bitcoin and blockchain?",
+    "answer": "Blockchain is the technology (a way of storing data in connected blocks). Bitcoin is an application that uses blockchain technology. Think of it like the difference between 'the internet' (technology) and 'email' (one application using that technology). Bitcoin was the first major use of blockchain, but now blockchain is used for many other things too."
+  },
+  {
+    "category": "Common Concerns",
+    "question": "Is Bitcoin only used by criminals?",
+    "answer": "No! This is a common myth. Like any technology, Bitcoin can be misused, but the vast majority of Bitcoin transactions are legitimate. In fact, Bitcoin is less anonymous than people think—all transactions are public on the blockchain, making it easier to trace than cash. Regular people, companies, and even governments are using and accepting Bitcoin."
+  },
+  {
+    "category": "Common Concerns",
+    "question": "Isn't Bitcoin bad for the environment?",
+    "answer": "Bitcoin mining does use significant energy, which is a legitimate concern. However: 1) Much mining now uses renewable energy, 2) The traditional banking system also uses massive amounts of energy, 3) Bitcoin's energy usage is declining relative to its transaction volume. It's a complex debate with valid points on both sides."
+  },
+  {
+    "category": "Common Concerns",
+    "question": "Will governments ban Bitcoin?",
+    "answer": "Some countries have restricted or banned Bitcoin (like China), while others have embraced it (like El Salvador making it legal tender). Most countries allow it with regulations. A complete global ban is unlikely because: 1) The network is decentralized across the world, 2) Many governments are exploring blockchain technology themselves, 3) There's economic incentive for countries to participate rather than ban it."
+  },
+  {
+    "category": "Common Concerns",
+    "question": "What if someone creates a better cryptocurrency?",
+    "answer": "Thousands of other cryptocurrencies exist, many with different features. However, Bitcoin has advantages: 1) First-mover advantage and largest network, 2) Most secure due to mining power, 3) Most widely recognized and accepted, 4) Simplest and most focused on being money. While other cryptos might have interesting features, none have matched Bitcoin's security and adoption for storing value."
+  }
+]

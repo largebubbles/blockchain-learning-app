@@ -1,0 +1,127 @@
+[
+  {
+    "term": "Blockchain",
+    "definition": "A digital ledger (record book) that stores information in groups called blocks, which are linked together in a chain. Each block contains transactions and is connected to the previous block, making it very difficult to change past records.",
+    "example": "Think of a blockchain like a notebook where each page is a block, and the pages are glued together in order—you can't remove or change a page without everyone noticing."
+  },
+  {
+    "term": "Bitcoin",
+    "definition": "The first and most well-known cryptocurrency. It's digital money that works without banks or governments controlling it. Created in 2009 by an anonymous person or group called Satoshi Nakamoto.",
+    "example": "Bitcoin is like digital cash that you can send to anyone in the world through the internet, without needing a bank."
+  },
+  {
+    "term": "Cryptocurrency",
+    "definition": "Digital money that uses cryptography (special math) for security and works on a blockchain. Bitcoin was the first cryptocurrency, but there are now thousands of others.",
+    "example": "Just like different countries have different currencies (dollars, euros, yen), there are different cryptocurrencies (Bitcoin, Ethereum, etc.)."
+  },
+  {
+    "term": "Wallet",
+    "definition": "A digital tool (app or device) that stores your private keys and lets you send and receive cryptocurrency. Important: The wallet doesn't store the actual cryptocurrency—it stores the keys that give you access to it on the blockchain.",
+    "example": "A crypto wallet is like a keychain—it holds the keys to your cryptocurrency, not the cryptocurrency itself."
+  },
+  {
+    "term": "Private Key",
+    "definition": "A secret code (like a password) that gives you control over your cryptocurrency. Anyone who has your private key can access and spend your crypto. Never share it!",
+    "example": "Your private key is like the password to your email—anyone who has it can access everything."
+  },
+  {
+    "term": "Public Key / Address",
+    "definition": "A code (like an email address) that others can use to send you cryptocurrency. It's safe to share publicly. It's mathematically linked to your private key but can't be used to figure out your private key.",
+    "example": "Your Bitcoin address is like your email address—you can share it with anyone who wants to send you money."
+  },
+  {
+    "term": "Mining",
+    "definition": "The process by which new cryptocurrency transactions are verified and added to the blockchain. Miners use powerful computers to solve complex math puzzles. The first to solve it gets to add the next block and receives newly created cryptocurrency as a reward.",
+    "example": "Mining is like a race where computers compete to solve puzzles. The winner gets to write the next page in the blockchain notebook and receives Bitcoin as a prize."
+  },
+  {
+    "term": "Transaction",
+    "definition": "The transfer of cryptocurrency from one address to another. All transactions are recorded on the blockchain and can be seen by anyone.",
+    "example": "A Bitcoin transaction is like writing in a public ledger: 'Alice sent 0.5 BTC to Bob.' Everyone can see it happened, but they might not know who Alice and Bob really are."
+  },
+  {
+    "term": "Block",
+    "definition": "A collection of transactions that are grouped together and added to the blockchain. Each block contains multiple transactions and is linked to the previous block.",
+    "example": "Think of a block like a page in a ledger book—it contains multiple transaction entries and is numbered to show its place in order."
+  },
+  {
+    "term": "Ledger",
+    "definition": "A record book that tracks all transactions. In blockchain, the ledger is distributed—thousands of computers each have a complete copy that's constantly updated and synchronized.",
+    "example": "A ledger is like a classroom attendance sheet, but instead of tracking who showed up, it tracks who sent and received money."
+  },
+  {
+    "term": "Decentralized",
+    "definition": "A system where control is distributed among many participants rather than controlled by a single central authority (like a bank or government).",
+    "example": "Wikipedia is somewhat decentralized—many people can edit it. Facebook is centralized—one company controls everything."
+  },
+  {
+    "term": "Peer-to-Peer (P2P)",
+    "definition": "Direct interaction between two parties without an intermediary. In cryptocurrency, it means sending money directly to someone else without going through a bank.",
+    "example": "Sending an email is peer-to-peer—you send it directly to the recipient without a middleman. Bitcoin works the same way for money."
+  },
+  {
+    "term": "Hash",
+    "definition": "A unique digital fingerprint created by running data through a special mathematical function. Even a tiny change in the data produces a completely different hash. Hashes are used to secure blocks and link them together.",
+    "example": "A hash is like a fingerprint for data—unique and nearly impossible to fake. Change even one letter in a document, and you get a totally different hash."
+  },
+  {
+    "term": "Node",
+    "definition": "A computer that participates in the blockchain network by maintaining a copy of the ledger and helping to verify new transactions.",
+    "example": "Nodes are like librarians who each have a copy of the same book and check with each other to make sure all copies match."
+  },
+  {
+    "term": "Consensus",
+    "definition": "The process by which all computers in a blockchain network agree on which transactions are valid and should be added to the blockchain. This prevents fraud and double-spending without needing a central authority.",
+    "example": "Consensus is like a classroom vote—the majority decides what's true. In blockchain, the majority of computers must agree before a transaction is accepted."
+  },
+  {
+    "term": "Double-Spending",
+    "definition": "The problem of spending the same digital money twice. This is impossible with physical cash but is a major challenge for digital currency. Blockchain solves this problem through consensus.",
+    "example": "Double-spending would be like photocopying a $20 bill and trying to use both the original and the copy. Blockchain prevents this by making everyone check the record before accepting money."
+  },
+  {
+    "term": "Satoshi Nakamoto",
+    "definition": "The pseudonym (fake name) used by the unknown person or group who created Bitcoin. Their real identity remains a mystery.",
+    "example": "Satoshi Nakamoto is like the Banksy of the crypto world—we know their work, but nobody knows who they really are."
+  },
+  {
+    "term": "Satoshi (unit)",
+    "definition": "The smallest unit of Bitcoin. One Bitcoin = 100 million satoshis. Named after Bitcoin's creator.",
+    "example": "A satoshi is like a penny to a dollar—the smallest piece of Bitcoin you can have. You don't need to buy a whole Bitcoin; you can buy a tiny fraction."
+  },
+  {
+    "term": "Confirmation",
+    "definition": "The process of a transaction being verified and added to a block on the blockchain. More confirmations mean more security. Bitcoin transactions typically wait for 6 confirmations to be considered fully secure.",
+    "example": "A confirmation is like getting a receipt stamped multiple times—each stamp makes it harder to fake."
+  },
+  {
+    "term": "Exchange",
+    "definition": "A platform where you can buy, sell, or trade cryptocurrencies. Examples include Coinbase, Kraken, and Binance.",
+    "example": "A crypto exchange is like a currency exchange at an airport, but for digital currencies instead of physical cash."
+  },
+  {
+    "term": "Seed Phrase",
+    "definition": "A list of 12-24 words that serves as a backup for your wallet. If you lose your device, you can use the seed phrase to recover your cryptocurrency. Must be kept extremely secret and safe!",
+    "example": "A seed phrase is like a master key to your house—anyone who has it can access everything. Write it down and store it somewhere very safe."
+  },
+  {
+    "term": "Gas Fee",
+    "definition": "A transaction fee paid to miners/validators for processing your transaction. The fee varies based on network congestion—more traffic means higher fees.",
+    "example": "Gas fees are like shipping costs—you pay more for faster delivery when everyone else is also trying to ship things."
+  },
+  {
+    "term": "Fiat Currency",
+    "definition": "Traditional government-issued money like US dollars, euros, or yen. Called 'fiat' because its value comes from government decree rather than being backed by physical commodities like gold.",
+    "example": "The dollar bills in your wallet are fiat currency—they have value because the government says they do."
+  },
+  {
+    "term": "Immutable",
+    "definition": "Cannot be changed or altered. Once data is added to a blockchain, it becomes permanent and cannot be modified or deleted.",
+    "example": "Blockchain records are immutable—like writing in permanent marker instead of pencil. Once it's written, it can't be erased."
+  },
+  {
+    "term": "Cold Storage",
+    "definition": "Storing cryptocurrency offline in a hardware wallet or paper wallet, completely disconnected from the internet. This is the most secure way to store crypto long-term.",
+    "example": "Cold storage is like keeping your money in a safe buried in your backyard instead of in a bank—very secure but not convenient for daily use."
+  }
+]
