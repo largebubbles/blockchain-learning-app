@@ -2,6 +2,8 @@
 
 A mobile-first educational website designed to teach blockchain and Bitcoin fundamentals to complete beginners with zero technical background.
 
+**🚀 Live Website: [https://blockchain-learning-app.vercel.app](https://blockchain-learning-app.vercel.app)**
+
 ## Features
 
 - **30-Day Learning Journey**: Bite-sized lessons (5-10 minutes each) covering blockchain and Bitcoin basics
@@ -75,7 +77,11 @@ npm run build
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the app.
+## Live Demo
+
+Visit the live website: **[https://blockchain-learning-app.vercel.app](https://blockchain-learning-app.vercel.app)**
+
+For local development, open [http://localhost:3000](http://localhost:3000) to view the app.
 
 ## Project Structure
 
