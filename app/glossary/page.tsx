@@ -32,25 +32,36 @@ export default function GlossaryPage() {
   const sortedLetters = Object.keys(groupedTerms).sort();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-900">
+    <div className="min-h-screen" style={{ background: 'var(--background)' }}>
       {/* Header */}
-      <header className="bg-white dark:bg-gray-800 shadow-sm">
-        <div className="max-w-4xl mx-auto px-4 py-6">
-          <Link href="/" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm font-medium">
+      <header className="border-b" style={{
+        background: 'var(--background-elevated)',
+        borderColor: 'var(--border)',
+        boxShadow: 'var(--shadow-sm)'
+      }}>
+        <div className="max-w-4xl mx-auto px-4 py-6 md:py-8">
+          <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold mb-3 hover-primary-text" style={{ color: 'var(--primary)' }}>
             ← Back to Home
           </Link>
-          <h1 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mt-2">Glossary</h1>
-          <p className="text-gray-600 dark:text-gray-300 mt-2">Quick reference for blockchain and Bitcoin terms</p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-2" style={{ color: 'var(--primary)' }}>Glossary</h1>
+          <p className="text-base md:text-lg" style={{ color: 'var(--foreground-muted)' }}>
+            Quick reference for blockchain and Bitcoin terms
+          </p>
         </div>
       </header>
 
       {/* Navigation */}
       <Navigation />
 
-      <main className="max-w-4xl mx-auto px-4 py-8">
+      <main className="max-w-4xl mx-auto px-4 py-8 md:py-12">
         {/* Search Box */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
-          <label htmlFor="search" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <div className="border-2 p-6 md:p-8 mb-10" style={{
+          background: 'var(--background-elevated)',
+          borderColor: 'var(--border-accent)',
+          borderRadius: '2px',
+          boxShadow: 'var(--shadow)'
+        }}>
+          <label htmlFor="search" className="block text-sm font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--foreground-muted)' }}>
             Search Terms
           </label>
           <input
@@ -59,10 +70,23 @@ export default function GlossaryPage() {
             placeholder="Type to search terms or definitions..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder-gray-400"
+            className="w-full px-5 py-4 border-2 text-base md:text-lg transition-all"
+            style={{
+              borderColor: 'var(--border)',
+              background: 'var(--background)',
+              color: 'var(--foreground)',
+              borderRadius: '2px'
+            }}
+            onFocus={(e) => {
+              e.currentTarget.style.borderColor = 'var(--primary)';
+              e.currentTarget.style.outline = 'none';
+            }}
+            onBlur={(e) => {
+              e.currentTarget.style.borderColor = 'var(--border)';
+            }}
           />
           {searchQuery && (
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+            <p className="text-sm font-medium mt-3" style={{ color: 'var(--foreground-muted)' }}>
               Found {filteredTerms.length} term{filteredTerms.length !== 1 ? 's' : ''}
             </p>
           )}
@@ -70,28 +94,51 @@ export default function GlossaryPage() {
 
         {/* Terms List */}
         {filteredTerms.length === 0 ? (
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 text-center">
-            <p className="text-gray-600 dark:text-gray-300">No terms found matching your search.</p>
+          <div className="border-2 p-12 text-center" style={{
+            background: 'var(--background-elevated)',
+            borderColor: 'var(--border)',
+            borderRadius: '2px'
+          }}>
+            <p className="text-lg" style={{ color: 'var(--foreground-muted)' }}>
+              No terms found matching your search.
+            </p>
           </div>
         ) : (
-          <div className="space-y-8">
+          <div className="space-y-10">
             {sortedLetters.map((letter) => (
-              <div key={letter} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-                <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-4 pb-2 border-b dark:border-gray-700">
-                  {letter}
+              <div key={letter} className="border-l-4 pl-6" style={{ borderColor: 'var(--primary)' }}>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 flex items-center gap-4" style={{
+                  fontFamily: 'Crimson Pro, Georgia, serif',
+                  color: 'var(--primary)'
+                }}>
+                  <span className="inline-flex items-center justify-center w-14 h-14 border-2" style={{
+                    borderColor: 'var(--primary)',
+                    background: 'var(--primary-light)',
+                    borderRadius: '2px'
+                  }}>
+                    {letter}
+                  </span>
                 </h2>
                 <div className="space-y-6">
                   {groupedTerms[letter].map((term: GlossaryTerm, index: number) => (
-                    <div key={index} className="border-l-4 border-blue-200 dark:border-blue-700 pl-4">
-                      <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+                    <div key={index} className="border-2 p-6 hover-border-secondary-slide" style={{
+                      background: 'var(--background-elevated)',
+                      borderColor: 'var(--border)',
+                      borderRadius: '2px'
+                    }}>
+                      <h3 className="text-xl md:text-2xl font-bold mb-3" style={{ color: 'var(--foreground)' }}>
                         {term.term}
                       </h3>
-                      <p className="text-gray-700 dark:text-gray-300 mb-3 leading-relaxed">
+                      <p className="mb-4 leading-relaxed text-base md:text-lg" style={{ color: 'var(--foreground-muted)' }}>
                         {term.definition}
                       </p>
-                      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
-                        <p className="text-sm text-gray-700 dark:text-gray-300">
-                          <span className="font-medium text-blue-600 dark:text-blue-400">Example:</span>{" "}
+                      <div className="border-l-3 pl-4 py-2" style={{
+                        borderLeftWidth: '3px',
+                        borderColor: 'var(--secondary)',
+                        background: 'var(--secondary-light)'
+                      }}>
+                        <p className="text-sm md:text-base leading-relaxed" style={{ color: 'var(--foreground-muted)' }}>
+                          <span className="font-bold" style={{ color: 'var(--secondary)' }}>Example:</span>{" "}
                           {term.example}
                         </p>
                       </div>
@@ -104,10 +151,16 @@ export default function GlossaryPage() {
         )}
 
         {/* Back to Home */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-12">
           <Link
             href="/"
-            className="inline-block px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
+            className="inline-block px-8 py-4 border-2 font-semibold hover-button"
+            style={{
+              borderColor: 'var(--primary)',
+              background: 'var(--primary)',
+              color: 'white',
+              borderRadius: '2px'
+            }}
           >
             Back to Home
           </Link>
@@ -115,12 +168,21 @@ export default function GlossaryPage() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-16 bg-gray-800 dark:bg-gray-950 text-white py-8">
+      <footer className="mt-20 py-12 border-t" style={{
+        background: 'var(--background-elevated)',
+        borderColor: 'var(--border)'
+      }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-sm">
-            Learn Blockchain - Your journey to understanding Bitcoin and blockchain technology
+          <div className="text-2xl font-bold mb-3" style={{
+            fontFamily: 'Crimson Pro, Georgia, serif',
+            color: 'var(--primary)'
+          }}>
+            Learn Blockchain
+          </div>
+          <p className="text-sm mb-2" style={{ color: 'var(--foreground-muted)' }}>
+            Your journey to understanding Bitcoin and blockchain technology
           </p>
-          <p className="text-xs text-gray-400 mt-2">
+          <p className="text-xs" style={{ color: 'var(--foreground-muted)', opacity: 0.7 }}>
             Educational purposes only. Not financial advice.
           </p>
         </div>

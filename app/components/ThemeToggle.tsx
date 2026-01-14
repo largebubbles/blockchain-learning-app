@@ -1,20 +1,33 @@
 "use client";
 
 import { useTheme } from "../providers";
+import { useState } from "react";
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="p-2.5 border-2 transition-all duration-200"
+      style={{
+        borderColor: isHovered ? 'var(--primary)' : 'var(--border)',
+        background: isHovered ? 'var(--primary-light)' : 'transparent',
+        borderRadius: '2px'
+      }}
       aria-label="Toggle theme"
     >
       {theme === "light" ? (
         // Moon icon for dark mode
         <svg
-          className="w-5 h-5 text-gray-800 dark:text-gray-200"
+          className="w-5 h-5 transition-transform duration-200"
+          style={{
+            color: 'var(--foreground)',
+            transform: isHovered ? 'rotate(20deg)' : 'rotate(0deg)'
+          }}
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +37,11 @@ export default function ThemeToggle() {
       ) : (
         // Sun icon for light mode
         <svg
-          className="w-5 h-5 text-gray-800 dark:text-gray-200"
+          className="w-5 h-5 transition-transform duration-200"
+          style={{
+            color: 'var(--foreground)',
+            transform: isHovered ? 'rotate(90deg)' : 'rotate(0deg)'
+          }}
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
