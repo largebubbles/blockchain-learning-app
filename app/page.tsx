@@ -144,7 +144,7 @@ export default function Home() {
                             </p>
                           </div>
                         </div>
-                        <svg className="w-5 h-5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor" style={{ color: 'var(--foreground-muted)' }}>
+                        <svg className="w-5 h-5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor" style={{ color: 'var(--foreground-muted)' }} aria-hidden="true">
                           <path d="M9 5l7 7-7 7"></path>
                         </svg>
                       </div>

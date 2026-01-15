@@ -65,24 +65,18 @@ export default function GlossaryPage() {
             Search Terms
           </label>
           <input
-            type="text"
+            type="search"
             id="search"
-            placeholder="Type to search terms or definitions..."
+            placeholder="Type to search terms or definitions…"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            autoComplete="off"
             className="w-full px-5 py-4 border-2 text-base md:text-lg transition-all"
             style={{
               borderColor: 'var(--border)',
               background: 'var(--background)',
               color: 'var(--foreground)',
               borderRadius: '2px'
-            }}
-            onFocus={(e) => {
-              e.currentTarget.style.borderColor = 'var(--primary)';
-              e.currentTarget.style.outline = 'none';
-            }}
-            onBlur={(e) => {
-              e.currentTarget.style.borderColor = 'var(--border)';
             }}
           />
           {searchQuery && (

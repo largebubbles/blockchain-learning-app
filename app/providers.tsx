@@ -22,9 +22,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       if (savedTheme === "dark") {
         document.documentElement.classList.remove("light");
         document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
       } else {
         document.documentElement.classList.remove("dark");
         document.documentElement.classList.add("light");
+        document.documentElement.style.colorScheme = "light";
       }
     } else {
       // Check system preference
@@ -34,9 +36,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       if (prefersDark) {
         document.documentElement.classList.remove("light");
         document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
       } else {
         document.documentElement.classList.remove("dark");
         document.documentElement.classList.add("light");
+        document.documentElement.style.colorScheme = "light";
       }
     }
   }, []);
@@ -50,9 +54,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (newTheme === "dark") {
       document.documentElement.classList.remove("light");
       document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
     } else {
       document.documentElement.classList.remove("dark");
       document.documentElement.classList.add("light");
+      document.documentElement.style.colorScheme = "light";
     }
 
     // Force a re-render by updating a CSS variable

@@ -154,20 +154,35 @@ body::before {
   }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+/* Respect prefers-reduced-motion for animations */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .animate-fade-in-up-delay-1 {
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+  }
+
+  .animate-fade-in-up-delay-2 {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+  }
+
+  .animate-fade-in-up-delay-3 {
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+  }
 }
 
-.animate-fade-in-up-delay-1 {
-  animation: fadeInUp 0.6s ease-out 0.1s both;
-}
-
-.animate-fade-in-up-delay-2 {
-  animation: fadeInUp 0.6s ease-out 0.2s both;
-}
-
-.animate-fade-in-up-delay-3 {
-  animation: fadeInUp 0.6s ease-out 0.3s both;
+/* Reduced motion: show content immediately */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-fade-in-up-delay-1,
+  .animate-fade-in-up-delay-2,
+  .animate-fade-in-up-delay-3 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Chain link decorative element */
@@ -198,9 +213,21 @@ a {
   transition: all 0.2s ease;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Smooth scrolling - respect prefers-reduced-motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Global focus-visible styles for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 /* Interactive element hover styles */
@@ -253,11 +280,12 @@ html {
 }
 
 .hover-shadow {
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .hover-shadow:hover {
   box-shadow: var(--shadow);
+  transform: translateY(-1px);
 }
 
 .hover-bg-primary-light {

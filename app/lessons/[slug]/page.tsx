@@ -83,7 +83,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
                 background: 'var(--secondary-light)',
                 borderRadius: '2px'
               }}>
-                <svg className="w-4 h-4" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor" style={{ color: 'var(--secondary)' }}>
+                <svg className="w-4 h-4" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor" style={{ color: 'var(--secondary)' }} aria-hidden="true">
                   <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <span className="text-sm font-medium" style={{ color: 'var(--foreground-muted)' }}>
@@ -158,7 +158,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
               }}
             >
               <div className="flex items-center gap-3 mb-2">
-                <svg className="w-5 h-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor" style={{ color: 'var(--primary)' }}>
+                <svg className="w-5 h-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor" style={{ color: 'var(--primary)' }} aria-hidden="true">
                   <path d="M15 19l-7-7 7-7"></path>
                 </svg>
                 <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--foreground-muted)' }}>Previous Lesson</span>
@@ -180,7 +180,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
             >
               <div className="flex items-center justify-end gap-3 mb-2">
                 <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--foreground-muted)' }}>Next Lesson</span>
-                <svg className="w-5 h-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor" style={{ color: 'var(--primary)' }}>
+                <svg className="w-5 h-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor" style={{ color: 'var(--primary)' }} aria-hidden="true">
                   <path d="M9 5l7 7-7 7"></path>
                 </svg>
               </div>

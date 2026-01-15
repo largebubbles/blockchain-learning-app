@@ -72,24 +72,18 @@ export default function FAQPage() {
             Search Questions
           </label>
           <input
-            type="text"
+            type="search"
             id="search"
-            placeholder="Type to search questions and answers..."
+            placeholder="Type to search questions and answers…"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            autoComplete="off"
             className="w-full px-5 py-4 border-2 text-base md:text-lg transition-all"
             style={{
               borderColor: 'var(--border)',
               background: 'var(--background)',
               color: 'var(--foreground)',
               borderRadius: '2px'
-            }}
-            onFocus={(e) => {
-              e.currentTarget.style.borderColor = 'var(--primary)';
-              e.currentTarget.style.outline = 'none';
-            }}
-            onBlur={(e) => {
-              e.currentTarget.style.borderColor = 'var(--border)';
             }}
           />
           {searchQuery && (
@@ -146,6 +140,7 @@ export default function FAQPage() {
                           style={{
                             background: isExpanded ? 'var(--primary-light)' : 'transparent'
                           }}
+                          aria-expanded={isExpanded}
                           onMouseEnter={(e) => {
                             if (!isExpanded) {
                               e.currentTarget.style.background = 'var(--primary-light)';
