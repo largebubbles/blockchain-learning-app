@@ -1,8 +1,61 @@
 import Link from "next/link";
 import { getLessonBySlug, getAllLessons } from "@/lib/lessons";
-import ReactMarkdown from "react-markdown";
+import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import Navigation from "@/app/components/Navigation";
+import Footer from "@/app/components/Footer";
+
+// Dynamic import for react-markdown to reduce initial bundle size
+const ReactMarkdown = dynamic(() => import("react-markdown"), {
+  loading: () => (
+    <div className="animate-pulse space-y-4">
+      <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+      <div className="h-4 bg-gray-200 rounded w-full"></div>
+      <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+    </div>
+  ),
+});
+
+// Hoisted markdown components to avoid recreation on each render
+// Using explicit typing compatible with react-markdown's Components type
+const markdownComponents = {
+  h1: ({ children }: { children?: React.ReactNode }) => (
+    <h1 className="text-3xl md:text-4xl font-bold mb-6 mt-10 first:mt-0 pb-3 border-b" style={{
+      color: 'var(--foreground)',
+      borderColor: 'var(--border-accent)'
+    }}>{children}</h1>
+  ),
+  h2: ({ children }: { children?: React.ReactNode }) => (
+    <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-8" style={{ color: 'var(--foreground)' }}>{children}</h2>
+  ),
+  h3: ({ children }: { children?: React.ReactNode }) => (
+    <h3 className="text-xl md:text-2xl font-bold mb-3 mt-6" style={{ color: 'var(--foreground)' }}>{children}</h3>
+  ),
+  p: ({ children }: { children?: React.ReactNode }) => (
+    <p className="mb-5 leading-relaxed text-base md:text-lg" style={{ color: 'var(--foreground-muted)' }}>{children}</p>
+  ),
+  ul: ({ children }: { children?: React.ReactNode }) => (
+    <ul className="mb-6 space-y-2 ml-6">{children}</ul>
+  ),
+  ol: ({ children }: { children?: React.ReactNode }) => (
+    <ol className="mb-6 space-y-2 ml-6">{children}</ol>
+  ),
+  li: ({ children }: { children?: React.ReactNode }) => (
+    <li className="pl-2 leading-relaxed" style={{
+      color: 'var(--foreground-muted)',
+      listStyleType: 'disc'
+    }}>{children}</li>
+  ),
+  strong: ({ children }: { children?: React.ReactNode }) => (
+    <strong className="font-bold" style={{ color: 'var(--foreground)' }}>{children}</strong>
+  ),
+  em: ({ children }: { children?: React.ReactNode }) => (
+    <em className="italic" style={{ color: 'var(--foreground-muted)' }}>{children}</em>
+  ),
+  hr: () => (
+    <hr className="my-10" style={{ borderColor: 'var(--border-accent)', borderWidth: '2px' }} />
+  ),
+};
 
 export async function generateStaticParams() {
   const lessons = getAllLessons();
@@ -101,46 +154,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
           borderRadius: '2px',
           boxShadow: 'var(--shadow)'
         }}>
-          <ReactMarkdown
-            components={{
-              h1: ({ children }) => (
-                <h1 className="text-3xl md:text-4xl font-bold mb-6 mt-10 first:mt-0 pb-3 border-b" style={{
-                  color: 'var(--foreground)',
-                  borderColor: 'var(--border-accent)'
-                }}>{children}</h1>
-              ),
-              h2: ({ children }) => (
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-8" style={{ color: 'var(--foreground)' }}>{children}</h2>
-              ),
-              h3: ({ children }) => (
-                <h3 className="text-xl md:text-2xl font-bold mb-3 mt-6" style={{ color: 'var(--foreground)' }}>{children}</h3>
-              ),
-              p: ({ children }) => (
-                <p className="mb-5 leading-relaxed text-base md:text-lg" style={{ color: 'var(--foreground-muted)' }}>{children}</p>
-              ),
-              ul: ({ children }) => (
-                <ul className="mb-6 space-y-2 ml-6">{children}</ul>
-              ),
-              ol: ({ children }) => (
-                <ol className="mb-6 space-y-2 ml-6">{children}</ol>
-              ),
-              li: ({ children }) => (
-                <li className="pl-2 leading-relaxed" style={{
-                  color: 'var(--foreground-muted)',
-                  listStyleType: 'disc'
-                }}>{children}</li>
-              ),
-              strong: ({ children }) => (
-                <strong className="font-bold" style={{ color: 'var(--foreground)' }}>{children}</strong>
-              ),
-              em: ({ children }) => (
-                <em className="italic" style={{ color: 'var(--foreground-muted)' }}>{children}</em>
-              ),
-              hr: () => (
-                <hr className="my-10" style={{ borderColor: 'var(--border-accent)', borderWidth: '2px' }} />
-              ),
-            }}
-          >
+          <ReactMarkdown components={markdownComponents}>
             {lesson.content}
           </ReactMarkdown>
         </article>
@@ -208,26 +222,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="mt-20 py-12 border-t" style={{
-        background: 'var(--background-elevated)',
-        borderColor: 'var(--border)'
-      }}>
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="text-2xl font-bold mb-3" style={{
-            fontFamily: 'Crimson Pro, Georgia, serif',
-            color: 'var(--primary)'
-          }}>
-            Learn Blockchain
-          </div>
-          <p className="text-sm mb-2" style={{ color: 'var(--foreground-muted)' }}>
-            Your journey to understanding Bitcoin and blockchain technology
-          </p>
-          <p className="text-xs" style={{ color: 'var(--foreground-muted)', opacity: 0.7 }}>
-            Educational purposes only. Not financial advice.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

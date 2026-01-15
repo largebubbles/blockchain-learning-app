@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import glossaryTerms from "@/content/glossary/terms.json";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 interface GlossaryTerm {
   term: string;
@@ -161,26 +162,7 @@ export default function GlossaryPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="mt-20 py-12 border-t" style={{
-        background: 'var(--background-elevated)',
-        borderColor: 'var(--border)'
-      }}>
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="text-2xl font-bold mb-3" style={{
-            fontFamily: 'Crimson Pro, Georgia, serif',
-            color: 'var(--primary)'
-          }}>
-            Learn Blockchain
-          </div>
-          <p className="text-sm mb-2" style={{ color: 'var(--foreground-muted)' }}>
-            Your journey to understanding Bitcoin and blockchain technology
-          </p>
-          <p className="text-xs" style={{ color: 'var(--foreground-muted)', opacity: 0.7 }}>
-            Educational purposes only. Not financial advice.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

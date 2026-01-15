@@ -2,12 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
   const pathname = usePathname();
-  const [hoveredPath, setHoveredPath] = useState<string | null>(null);
 
   const isActive = (path: string) => {
     if (path === "/") {
@@ -37,15 +35,15 @@ export default function Navigation() {
             <Link
               key={item.path}
               href={item.path}
-              className="px-4 py-2 font-semibold text-sm md:text-base transition-all duration-200 border-2"
+              className={`px-4 py-2 font-semibold text-sm md:text-base transition-all duration-200 border-2 ${
+                active ? 'nav-link-active' : 'nav-link'
+              }`}
               style={{
                 color: active ? 'white' : 'var(--foreground)',
                 background: active ? 'var(--primary)' : 'transparent',
-                borderColor: active ? 'var(--primary)' : (hoveredPath === item.path ? 'var(--primary)' : 'transparent'),
+                borderColor: active ? 'var(--primary)' : 'transparent',
                 borderRadius: '2px'
               }}
-              onMouseEnter={() => setHoveredPath(item.path)}
-              onMouseLeave={() => setHoveredPath(null)}
             >
               {item.label}
             </Link>

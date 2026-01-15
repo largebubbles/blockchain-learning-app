@@ -63,9 +63,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     // Force a re-render by updating a CSS variable
     document.documentElement.style.setProperty('--theme', newTheme);
-
-    console.log('Theme toggled to:', newTheme);
-    console.log('HTML classes:', document.documentElement.className);
   };
 
   return (

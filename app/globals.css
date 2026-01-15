@@ -331,3 +331,26 @@ textarea:focus-visible {
   border-color: var(--secondary) !important;
   transform: translateX(8px);
 }
+
+/* Navigation link hover styles (CSS-only, no useState) */
+.nav-link {
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  border-color: var(--primary) !important;
+}
+
+/* Theme toggle button hover styles (CSS-only, no useState) */
+.theme-toggle-btn:hover {
+  border-color: var(--primary) !important;
+  background: var(--primary-light) !important;
+}
+
+.theme-toggle-btn:hover .theme-toggle-icon {
+  transform: rotate(20deg);
+}
+
+.theme-toggle-btn:hover .theme-toggle-icon-sun {
+  transform: rotate(90deg);
+}
